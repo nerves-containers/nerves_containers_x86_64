@@ -1,0 +1,34 @@
+variables:
+  DOCKER_DRIVER: overlay2
+  DOCKER_HOST: tcp://docker:2376
+  DOCKER_TLS_VERIFY: 1
+  DOCKER_TLS_CERTDIR: "/certs"
+  DOCKER_CERT_PATH: "/certs/client"
+
+stages:
+  - build
+
+#####################
+
+build_artifact:
+  image: $CI_REGISTRY/nerves-containers/nerves_ci/buildimage:$CI_COMMIT_REF_NAME
+  stage: build
+  script:
+    - bash _init_ci.sh
+    - mkdir -p /tmp/nerves_artifacts
+    - mix nerves.artifact --path /tmp/nerves_artifacts
+    - ssh-keyscan anubis.steffend.me >> ~/.ssh/known_hosts
+    - rsync -av -e "ssh -i ~/.ssh/github.key" /tmp/nerves_artifacts/* nerves@anubis.steffend.me:/datapool/nerves/artifacts/
+  artifacts:
+    paths:
+      - /tmp/nerves_artifacts/
+  cache:
+    key: build-cache-$CI_COMMIT_REF_SLUG
+    paths:
+      - .nerves/
+      - _build/
+      - deps/
+  only:
+    refs:
+      - main
+      - development
