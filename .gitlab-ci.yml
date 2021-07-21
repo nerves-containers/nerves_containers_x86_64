@@ -22,12 +22,6 @@ build_artifact:
   artifacts:
     paths:
       - /tmp/nerves_artifacts/
-  cache:
-    key: build-cache-$CI_COMMIT_REF_SLUG
-    paths:
-      - .nerves/
-      - _build/
-      - deps/
   only:
     refs:
       - main
