@@ -1,4 +1,4 @@
-defmodule NervesContainersX8664.MixProject do
+defmodule NervesContainersX8664Uefi.MixProject do
   use Mix.Project
 
   @github_organization "nerves-containers"
@@ -10,7 +10,7 @@ defmodule NervesContainersX8664.MixProject do
 
   def project do
     [
-      app: @app,
+      app: String.to_atom(Atom.to_string(@app) <> "_uefi"),
       version: @version,
       elixir: "~> 1.6",
       compilers: Mix.compilers() ++ [:nerves_package],
@@ -74,7 +74,7 @@ defmodule NervesContainersX8664.MixProject do
 
   defp description do
     """
-    Nerves System - x86_64
+    Nerves System - x86_64 UEFI
     """
   end
 
