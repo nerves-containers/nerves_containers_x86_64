@@ -19,9 +19,6 @@ build_artifact:
     - mix nerves.artifact --path /tmp/nerves_artifacts
     - ssh-keyscan anubis.steffend.me >> ~/.ssh/known_hosts
     - rsync -av -e "ssh -i ~/.ssh/github.key" /tmp/nerves_artifacts/* nerves@anubis.steffend.me:/datapool/nerves/artifacts/
-  artifacts:
-    paths:
-      - /tmp/nerves_artifacts/
   only:
     refs:
       - main
