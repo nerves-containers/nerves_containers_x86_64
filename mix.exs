@@ -1,8 +1,8 @@
-defmodule NervesContainersX8664.MixProject do
+defmodule NervesFlasherX8664.MixProject do
   use Mix.Project
 
   @github_organization "nerves-containers"
-  @app :nerves_containers_x86_64
+  @app :nerves_flasher_x86_64
   @source_url "https://github.com/#{@github_organization}/#{@app}"
   @version Path.join(__DIR__, "VERSION")
            |> File.read!()
@@ -103,7 +103,6 @@ defmodule NervesContainersX8664.MixProject do
       "priv",
       "rootfs_overlay",
       "CHANGELOG.md",
-      "fwup-revert.conf",
       "fwup.conf",
       "grub.cfg",
       "LICENSE",
