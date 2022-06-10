@@ -11,7 +11,7 @@ stages:
 #####################
 
 build_artifact:
-  image: $CI_REGISTRY/nerves-containers/nerves_ci/buildimage:1.17.1
+  image: $CI_REGISTRY/nerves-containers/nerves_ci/buildimage:1.19.1
   stage: build
   script:
     - bash _init_ci.sh
