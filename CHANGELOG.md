@@ -12,6 +12,29 @@ follows:
    releases, and Linux kernel updates. They're also made to fix bugs and add
    features to the build infrastructure.
 
+## v1.20.1
+
+* Fixes
+  * Fix a Buildroot configuration error that caused a non-Nerves GCC 11.2
+    toolchain to be used instead of the Nerves GCC 11.3 toolchain. Due to an ABI
+    difference, NIFs and ports wouldn't work.
+
+* Changes
+  * Write to the end of the data partition when writing complete images. This
+    makes it possible to use the data partition in qemu without additional work.
+
+* Updated dependencies
+  * Linux 5.4.204
+
+## v1.20.0
+
+This release updates to Buildroot 2022.05 and uses GCC 11.3 (from GCC 10.3).
+
+* Updated dependencies
+  * [nerves_system_br v1.20.3](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.20.3)
+  * [Buildroot 2022.05](http://lists.busybox.net/pipermail/buildroot/2022-June/644349.html)
+  * [Erlang/OTP 25.0.2](https://erlang.org/download/OTP-25.0.2.README)
+
 ## v1.19.0
 
 This release updates to Buildroot 2022.02.1 and OTP 25.0. While this should be
