@@ -56,9 +56,9 @@ defmodule NervesContainersX8664.MixProject do
       env: [
         {"TARGET_ARCH", "x86_64"},
         {"TARGET_OS", "linux"},
-        {"TARGET_ABI", "gnu"},
-        {"TARGET_GCC_FLAGS",
-         "-m64 -fstack-protector-strong -march=x86-64 -fPIE -pie -Wl,-z,now -Wl,-z,relro"}
+        {"TARGET_ABI", "gnu"}
+        # {"TARGET_GCC_FLAGS",
+        #  "-m64 -fstack-protector-strong -march=x86-64 -fPIE -pie -Wl,-z,now -Wl,-z,relro"}
       ],
       checksum: package_files()
     ]
