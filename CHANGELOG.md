@@ -12,6 +12,42 @@ follows:
    releases, and Linux kernel updates. They're also made to fix bugs and add
    features to the build infrastructure.
 
+## v1.21.1
+
+* Changes
+  * Fix regression when building on x86_64 Linux where wrong toolchain was used.
+  * Reduce first-time Linux kernel download by using tarball source
+
+* Updated dependencies
+  * [nerves_system_br v1.21.2](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.21.2)
+  * [Erlang/OTP 25.1.2](https://erlang.org/download/OTP-25.1.2.README)
+
+## v1.21.0
+
+* Changes
+  * Support aarch64 Linux builds
+  * Add libdtc to support runtime loading of device tree overlays
+
+* Updated dependencies
+  * [nerves_system_br v1.21.1](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.21.1)
+    and also see [nerves_system_br v1.21.0](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.21.0)
+  * [Buildroot 2022.08.1](http://lists.busybox.net/pipermail/buildroot/2022-October/652816.html)
+  * [Erlang/OTP 25.1.1](https://erlang.org/download/OTP-25.1.1.README)
+
+## v1.20.3
+
+* Updated dependencies
+  * [nerves_system_br v1.20.6](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.20.6)
+  * [Erlang/OTP 25.0.4](https://erlang.org/download/OTP-25.0.4.README)
+  * [Buildroot 2022.05.2](http://lists.busybox.net/pipermail/buildroot/2022-August/650546.html)
+  * Also see [Buildroot 2022.05.1 changes](http://lists.busybox.net/pipermail/buildroot/2022-July/647814.html)
+
+## v1.20.2
+
+* Updated dependencies
+  * [nerves_system_br v1.20.4](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.20.4)
+  * [Erlang/OTP 25.0.3](https://erlang.org/download/OTP-25.0.3.README)
+
 ## v1.20.1
 
 * Fixes
