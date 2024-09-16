@@ -12,6 +12,90 @@ follows:
    releases, and Linux kernel updates. They're also made to fix bugs and add
    features to the build infrastructure.
 
+## v1.28.1
+
+This is a security/bug fix update.
+
+* Updated dependencies
+  * [nerves_system_br v1.28.3](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.28.3)
+  * [Buildroot 2024.05.2](https://lore.kernel.org/buildroot/87zfpfh147.fsf@dell.be.48ers.dk/T/)
+  * [Erlang/OTP 27.0.1](https://erlang.org/download/OTP-27.0.1.README)
+
+## v1.28.0
+
+This is a major Erlang and Buildroot.
+
+Please see the [nerves_system_br v1.28.0 release notes](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.28.0)
+for upgrade instructions if you've forked this system.
+
+* Changes
+  * Elixir 1.17 and Erlang/OTP 27 support
+  * Reduce copy/pasted definitions in the `fwup.conf` by extracting them to
+    `fwup_include/fwup-common.conf`. (No functional changes)
+
+* Fixes
+  * The serial numbers returned by `Nerves.Runtime.serial_number/0` now contain
+    the whole serial number. If you forked this system, check the
+    `boardid.config` and `erlinit.config` for the changes and to keep the
+    hostname the same.
+
+* Updated dependencies
+  * [nerves_system_br v1.28.1](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.28.1)
+  * [Buildroot 2024.05](https://lore.kernel.org/buildroot/87bk46tjk2.fsf@dell.be.48ers.dk/T/)
+  * [Erlang/OTP 27.0](https://erlang.org/download/OTP-27.0.README)
+
+## v1.27.1
+
+This is a security/bug fix update.
+
+* Package updates
+  * [Erlang/OTP 26.2.5](https://erlang.org/download/OTP-26.2.5.README)
+  * [Buildroot 2024.02.1](https://lore.kernel.org/buildroot/87jzlp9u5e.fsf@48ers.dk/T/)
+
+## v1.27.0
+
+This is a major Buildroot update.
+
+Please see the [nerves_system_br v1.27.0 release notes](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.26.0)
+for upgrade instructions if you've forked this system.
+
+* Updated dependencies
+  * [nerves_system_br v1.27.0](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.27.0)
+  * [Buildroot 2024.02](https://lore.kernel.org/buildroot/87msrczp4z.fsf@48ers.dk/)
+  * [Erlang/OTP 26.2.3](https://erlang.org/download/OTP-26.2.3.README)
+
+## v1.26.0
+
+This is a major Buildroot update.
+
+Please see the [nerves_system_br v1.26.0 release notes](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.26.0)
+for upgrade instructions if you've forked this system.
+
+* Updated dependencies
+  * [Erlang/OTP 26.2.2](https://erlang.org/download/OTP-26.2.2.README)
+  * [nerves_system_br v1.26.1](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.26.1)
+  * [Buildroot 2023.11.1](https://lore.kernel.org/buildroot/87cyu2k2gu.fsf@48ers.dk/T/)
+
+## v1.25.1
+
+This is a security/bug fix update.
+
+ Package updates
+  * [Erlang/OTP 26.2.1](https://erlang.org/download/OTP-26.2.1.README)
+  * [nerves_heart 2.3.0](https://github.com/nerves-project/nerves_heart/releases/tag/v2.3.0)
+
+## v1.25.0
+
+This is a major Buildroot and toolchain update.
+
+Please see [nerves_system_br v1.25.0 release notes](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.25.0)
+for upgrade instructions if you've forked this system.
+
+* Updated dependencies
+  * [nerves_system_br v1.25.2](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.25.2)
+  * [Buildroot 2023.08.4](https://lore.kernel.org/buildroot/87o7f6t7fs.fsf@48ers.dk/T/)
+  * [Erlang/OTP 26.1.2](https://erlang.org/download/OTP-26.1.2.README)
+
 ## v1.24.1
 
 This is a security/bug fix update.

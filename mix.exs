@@ -12,7 +12,8 @@ defmodule NervesContainersX8664.MixProject do
     [
       app: @app,
       version: @version,
-      elixir: "~> 1.6",
+      # Because we're using OTP 27, we need to enforce Elixir 1.17 or later.
+      elixir: "~> 1.17",
       compilers: Mix.compilers() ++ [:nerves_package],
       nerves_package: nerves_package(),
       description: description(),
@@ -66,8 +67,8 @@ defmodule NervesContainersX8664.MixProject do
 
   defp deps do
     [
-      {:nerves, "~> 1.5.4 or ~> 1.6.0 or ~> 1.7.15 or ~> 1.8", runtime: false},
-      {:nerves_system_br, "1.25.0", runtime: false},
+      {:nerves, "~> 1.11", runtime: false},
+      {:nerves_system_br, "1.28.3", runtime: false},
       {:nerves_toolchain_x86_64_nerves_linux_musl, "~> 13.2.0", runtime: false},
       {:nerves_system_linter, "~> 0.4", only: [:dev, :test], runtime: false},
       {:ex_doc, "~> 0.22", only: :docs, runtime: false}
