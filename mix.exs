@@ -43,8 +43,7 @@ defmodule NervesContainersX8664.MixProject do
     [
       type: :system,
       artifact_sites: [
-        # {:github_releases, "#{@github_organization}/#{@app}"}
-        {:prefix, "https://nerves-containers.steffend.me/artifacts/"}
+        {:github_releases, "#{@github_organization}/#{@app}"}
       ],
       build_runner_opts: build_runner_opts(),
       platform: Nerves.System.BR,
