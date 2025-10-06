@@ -12,6 +12,10 @@ follows:
    releases, and Linux kernel updates. They're also made to fix bugs and add
    features to the build infrastructure.
 
+## v1.31.4
+
+Updates Linux from 5.10 to 6.12.
+
 ## v1.31.3
 
 This is an important security/bug fix that addresses Erlang CVEs for the ssh

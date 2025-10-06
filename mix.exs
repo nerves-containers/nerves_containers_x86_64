@@ -110,7 +110,7 @@ defmodule NervesContainersX8664.MixProject do
       "fwup.conf",
       "grub.cfg",
       "LICENSES/*",
-      "linux-5.10.defconfig",
+      "linux-6.12.defconfig",
       "busybox.fragment",
       "mix.exs",
       "nerves_defconfig",
