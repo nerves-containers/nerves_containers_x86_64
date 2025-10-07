@@ -111,6 +111,7 @@ defmodule NervesContainersX8664.MixProject do
       "grub.cfg",
       "LICENSES/*",
       "linux-6.12.defconfig",
+      "linux.fragment",
       "busybox.fragment",
       "mix.exs",
       "nerves_defconfig",
